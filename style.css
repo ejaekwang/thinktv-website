@@ -1,7 +1,7 @@
 /* ===== Variables — Bright Music Theme ===== */
 :root {
-  --color-bg: #f8f5fc;
-  --color-bg-deep: #efe8f8;
+  --color-bg: #f4f7e6;
+  --color-bg-deep: #eef5dc;
   --color-bg-elevated: #ffffff;
   --color-bg-section: rgba(255, 255, 255, 0.5);
   --color-surface: rgba(255, 255, 255, 0.78);
@@ -19,13 +19,13 @@
   --gradient-metallic-line: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(167, 139, 250, 0.35) 50%,
+    rgba(180, 210, 120, 0.4) 50%,
     transparent 100%
   );
   --gradient-section: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.55) 0%,
-    rgba(255, 255, 255, 0.25) 100%
+    rgba(255, 252, 235, 0.65) 0%,
+    rgba(236, 248, 220, 0.45) 100%
   );
   --font-sans: "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
   --radius: 12px;
@@ -60,9 +60,9 @@ html {
   background:
     linear-gradient(
       180deg,
-      rgba(255, 252, 250, 0.72) 0%,
-      rgba(248, 245, 252, 0.82) 50%,
-      rgba(240, 248, 255, 0.78) 100%
+      rgba(255, 251, 228, 0.78) 0%,
+      rgba(240, 248, 218, 0.85) 50%,
+      rgba(232, 245, 210, 0.8) 100%
     ),
     url("bg-music.svg") center center / cover no-repeat;
   background-attachment: fixed;
@@ -136,7 +136,7 @@ ul {
 }
 
 .btn-outline:hover {
-  border-color: rgba(167, 139, 250, 0.5);
+  border-color: rgba(180, 200, 120, 0.55);
   background: var(--color-surface-hover);
   box-shadow: var(--shadow);
 }
@@ -252,8 +252,8 @@ ul {
   inset: 0;
   background:
     radial-gradient(ellipse 70% 50% at 50% 20%, var(--color-accent-glow), transparent 55%),
-    radial-gradient(ellipse 50% 40% at 90% 60%, rgba(167, 139, 250, 0.12), transparent),
-    radial-gradient(ellipse 45% 35% at 10% 80%, rgba(249, 168, 212, 0.15), transparent);
+    radial-gradient(ellipse 50% 40% at 90% 60%, rgba(220, 235, 160, 0.35), transparent),
+    radial-gradient(ellipse 45% 35% at 10% 80%, rgba(255, 245, 200, 0.4), transparent);
   pointer-events: none;
 }
 
@@ -429,7 +429,7 @@ ul {
 
 .video-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(167, 139, 250, 0.35);
+  border-color: rgba(180, 200, 120, 0.45);
   box-shadow: var(--shadow-lg);
 }
 
@@ -437,7 +437,7 @@ ul {
   position: relative;
   display: block;
   aspect-ratio: 16 / 9;
-  background: linear-gradient(145deg, #ede9fe 0%, #fce7f3 100%);
+  background: linear-gradient(145deg, #f5f9e8 0%, #eef8dc 100%);
   overflow: hidden;
 }
 
