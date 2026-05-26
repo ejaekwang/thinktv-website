@@ -1,17 +1,24 @@
-/* ===== Variables ===== */
+/* ===== Variables — Deep Navy Theme ===== */
 :root {
-  --color-bg: #0f0f0f;
-  --color-surface: #1a1a1a;
-  --color-surface-hover: #252525;
-  --color-text: #f1f1f1;
-  --color-text-muted: #aaaaaa;
-  --color-accent: #ff0033;
-  --color-accent-hover: #cc0029;
-  --color-border: #2a2a2a;
+  --color-bg: #0a0f1a;
+  --color-bg-elevated: #0f1628;
+  --color-surface: #151d32;
+  --color-surface-raised: #1a2540;
+  --color-surface-hover: #1f2d4a;
+  --color-text: #e8ecf4;
+  --color-text-muted: #94a3b8;
+  --color-accent: #ff3d5c;
+  --color-accent-hover: #e63552;
+  --color-accent-glow: rgba(255, 61, 92, 0.18);
+  --color-border: rgba(148, 163, 184, 0.14);
+  --color-border-strong: rgba(148, 163, 184, 0.26);
+  --color-highlight: rgba(96, 165, 250, 0.1);
   --font-sans: "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
   --radius: 12px;
   --radius-lg: 20px;
-  --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 4px 16px rgba(5, 12, 30, 0.35);
+  --shadow: 0 12px 40px rgba(5, 12, 30, 0.45);
+  --shadow-lg: 0 20px 56px rgba(5, 12, 30, 0.55);
   --transition: 0.2s ease;
   --container: 1100px;
 }
@@ -31,7 +38,10 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: var(--color-bg);
+  background:
+    radial-gradient(ellipse 100% 60% at 50% -10%, var(--color-highlight), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 100% 50%, rgba(30, 58, 95, 0.25), transparent),
+    var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -89,8 +99,9 @@ ul {
 }
 
 .btn-outline:hover {
-  border-color: var(--color-text-muted);
-  background: var(--color-surface);
+  border-color: var(--color-border-strong);
+  background: var(--color-surface-hover);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-small {
@@ -116,9 +127,10 @@ ul {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(15, 15, 15, 0.85);
-  backdrop-filter: blur(12px);
+  background: rgba(10, 15, 26, 0.88);
+  backdrop-filter: blur(14px) saturate(1.2);
   border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 4px 24px rgba(5, 12, 30, 0.35);
 }
 
 .nav {
@@ -178,8 +190,9 @@ ul {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 0, 51, 0.15), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(255, 0, 51, 0.08), transparent);
+    radial-gradient(ellipse 80% 55% at 50% 0%, var(--color-accent-glow), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 85% 70%, rgba(59, 130, 246, 0.12), transparent),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(30, 58, 95, 0.2), transparent);
   pointer-events: none;
 }
 
@@ -260,7 +273,9 @@ ul {
 
 /* ===== About ===== */
 .about {
-  background: var(--color-surface);
+  background: linear-gradient(180deg, var(--color-bg-elevated) 0%, var(--color-bg) 100%);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .about-grid {
@@ -276,9 +291,9 @@ ul {
   margin: 0 auto;
   border-radius: 28px;
   overflow: hidden;
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow);
-  background: var(--color-bg);
+  border: 1px solid var(--color-border-strong);
+  box-shadow: var(--shadow-lg);
+  background: var(--color-surface);
 }
 
 .profile-photo img {
@@ -302,10 +317,12 @@ ul {
 
 .about-tags li {
   padding: 0.4rem 0.9rem;
-  background: var(--color-bg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 999px;
   font-size: 0.85rem;
   color: var(--color-text-muted);
+  box-shadow: var(--shadow-sm);
 }
 
 /* ===== Videos ===== */
@@ -316,22 +333,25 @@ ul {
 }
 
 .video-card {
-  background: var(--color-surface);
+  background: linear-gradient(165deg, var(--color-surface-raised) 0%, var(--color-surface) 100%);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .video-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
+  transform: translateY(-5px);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-lg);
 }
 
 .video-thumb {
   position: relative;
   display: block;
   aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  background: linear-gradient(145deg, #1e2a42 0%, #121a2e 100%);
   overflow: hidden;
 }
 
@@ -352,12 +372,12 @@ ul {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.35);
+  background: linear-gradient(180deg, rgba(10, 15, 26, 0.15) 0%, rgba(10, 15, 26, 0.45) 100%);
   transition: background var(--transition);
 }
 
 .video-card:hover .video-thumb::before {
-  background: rgba(0, 0, 0, 0.2);
+  background: linear-gradient(180deg, rgba(10, 15, 26, 0.05) 0%, rgba(10, 15, 26, 0.3) 100%);
 }
 
 .play-icon {
@@ -371,19 +391,19 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 0, 51, 0.75);
+  background: rgba(255, 61, 92, 0.82);
   color: #fff;
   border-radius: 50%;
   font-size: 1.15rem;
-  border: 2px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.88);
+  box-shadow: 0 8px 28px rgba(5, 12, 30, 0.5);
   backdrop-filter: blur(4px);
   transition: transform var(--transition), background var(--transition);
 }
 
 .video-card:hover .play-icon {
   transform: translate(-50%, -50%) scale(1.08);
-  background: rgba(255, 0, 51, 0.9);
+  background: rgba(255, 61, 92, 0.95);
 }
 
 .video-duration {
@@ -392,7 +412,8 @@ ul {
   right: 0.65rem;
   z-index: 2;
   padding: 0.35rem 0.65rem;
-  background: rgba(0, 0, 0, 0.72);
+  background: rgba(10, 15, 26, 0.78);
+  border: 1px solid var(--color-border);
   border-radius: 6px;
   font-size: 0.75rem;
   font-weight: 600;
@@ -400,7 +421,8 @@ ul {
 }
 
 .video-info {
-  padding: 1rem;
+  padding: 1rem 1.1rem 1.15rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 15, 26, 0.25) 100%);
 }
 
 .video-info h3 {
@@ -428,9 +450,10 @@ ul {
 .subscribe-box {
   text-align: center;
   padding: 3.5rem 2rem;
-  background: var(--color-surface);
+  background: linear-gradient(165deg, var(--color-surface-raised) 0%, var(--color-surface) 100%);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
 }
 
 .subscribe-title {
@@ -468,6 +491,7 @@ ul {
 .footer {
   padding: 2rem 0;
   border-top: 1px solid var(--color-border);
+  background: rgba(10, 15, 26, 0.6);
 }
 
 .footer-inner {
