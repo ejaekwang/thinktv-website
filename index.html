@@ -23,7 +23,13 @@
         <li><a href="#videos">영상</a></li>
         <li><a href="#subscribe">구독</a></li>
       </ul>
-      <a href="https://www.youtube.com/@이렇게생각TV" class="btn btn-small" target="_blank" rel="noopener noreferrer">구독하기</a>
+      <div
+        class="yt-subscribe yt-subscribe--header g-ytsubscribe"
+        data-channel="이렇게생각TV"
+        data-layout="default"
+        data-count="default"
+        data-theme="default"
+      ></div>
     </nav>
   </header>
 
@@ -137,9 +143,13 @@
       <div class="container subscribe-box">
         <h2 class="subscribe-title">구독하고 함께해요</h2>
         <p>새로운 지식·음악 영상이 올라오면 가장 먼저 알림을 받아보세요.</p>
-        <a href="https://www.youtube.com/@이렇게생각TV?sub_confirmation=1" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
-          YouTube에서 구독하기
-        </a>
+        <div
+          class="yt-subscribe yt-subscribe--section g-ytsubscribe"
+          data-channel="이렇게생각TV"
+          data-layout="full"
+          data-count="default"
+          data-theme="default"
+        ></div>
         <div class="social-links">
           <a href="#" aria-label="Instagram">Instagram</a>
           <a href="#" aria-label="Twitter">Twitter</a>
@@ -155,5 +165,7 @@
       <a href="https://www.youtube.com/@이렇게생각TV" target="_blank" rel="noopener noreferrer">YouTube 채널</a>
     </div>
   </footer>
+
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
 </body>
 </html>

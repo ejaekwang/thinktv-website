@@ -159,6 +159,24 @@ ul {
   font-size: 1.05rem;
 }
 
+/* ===== YouTube Subscribe Widget ===== */
+.yt-subscribe {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.yt-subscribe--header {
+  flex-shrink: 0;
+  min-height: 24px;
+}
+
+.yt-subscribe--section {
+  justify-content: center;
+  margin-bottom: 2rem;
+  min-height: 48px;
+}
+
 /* ===== Header ===== */
 .header {
   position: fixed;
